@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html><head><title>Medium</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!-- base href="https://blog.sicara.com/media/1cc21dcf636d99d73b189a5f11058e54?postId=42d100429e44" --><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="1cc21dcf636d99d73b189a5f11058e54_data/0c61ffe82260d3dd388ec8a38afdab82.js" charset="utf-8"></script><link rel="stylesheet" href="df64c19c163a394ab75ff536c2091665_data/gist-embed-c25e2efde9da332f6cd59ef5c647a379.css"><div id="gist86773954" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-nb_classifier-py" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-python ">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-nb_classifier-py-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-nb_classifier-py-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Instantiate the classifier</span></td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-nb_classifier-py-LC2" class="blob-code blob-code-inner js-file-line">gnb <span class="pl-k">=</span> GaussianNB()</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-nb_classifier-py-LC3" class="blob-code blob-code-inner js-file-line">used_features <span class="pl-k">=</span>[</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-nb_classifier-py-LC4" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Pclass<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-nb_classifier-py-LC5" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Sex_cleaned<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-nb_classifier-py-LC6" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Age<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-nb_classifier-py-LC7" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>SibSp<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-nb_classifier-py-LC8" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Parch<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-nb_classifier-py-LC9" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Fare<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-nb_classifier-py-LC10" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Embarked_cleaned<span class="pl-pds">"</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-nb_classifier-py-LC11" class="blob-code blob-code-inner js-file-line">]</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-nb_classifier-py-LC12" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-nb_classifier-py-LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Train classifier</span></td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-nb_classifier-py-LC14" class="blob-code blob-code-inner js-file-line">gnb.fit(</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-nb_classifier-py-LC15" class="blob-code blob-code-inner js-file-line">    X_train[used_features].values,</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-nb_classifier-py-LC16" class="blob-code blob-code-inner js-file-line">    X_train[<span class="pl-s"><span class="pl-pds">"</span>Survived<span class="pl-pds">"</span></span>]</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-nb_classifier-py-LC17" class="blob-code blob-code-inner js-file-line">)</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-nb_classifier-py-LC18" class="blob-code blob-code-inner js-file-line">y_pred <span class="pl-k">=</span> gnb.predict(X_test[used_features])</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-nb_classifier-py-LC19" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-nb_classifier-py-LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Print results</span></td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-nb_classifier-py-LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-c1">print</span>(<span class="pl-s"><span class="pl-pds">"</span>Number of mislabeled points out of a total <span class="pl-c1">{}</span> points : <span class="pl-c1">{}</span>, performance <span class="pl-c1">{<span class="pl-k">:05.2f</span>}</span>%<span class="pl-pds">"</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-nb_classifier-py-LC22" class="blob-code blob-code-inner js-file-line">      .format(</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-nb_classifier-py-LC23" class="blob-code blob-code-inner js-file-line">          X_test.shape[<span class="pl-c1">0</span>],</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-nb_classifier-py-LC24" class="blob-code blob-code-inner js-file-line">          (X_test[<span class="pl-s"><span class="pl-pds">"</span>Survived<span class="pl-pds">"</span></span>] <span class="pl-k">!=</span> y_pred).sum(),</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-nb_classifier-py-LC25" class="blob-code blob-code-inner js-file-line">          <span class="pl-c1">100</span><span class="pl-k">*</span>(<span class="pl-c1">1</span><span class="pl-k">-</span>(X_test[<span class="pl-s"><span class="pl-pds">"</span>Survived<span class="pl-pds">"</span></span>] <span class="pl-k">!=</span> y_pred).sum()<span class="pl-k">/</span>X_test.shape[<span class="pl-c1">0</span>])</td>
+      </tr>
+      <tr>
+        <td id="file-nb_classifier-py-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-nb_classifier-py-LC26" class="blob-code blob-code-inner js-file-line">))</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/martmull/0c61ffe82260d3dd388ec8a38afdab82/raw/96ae951b9f2fbecf20650cf6fb0fb2186b942285/nb_classifier.py" style="float:right">view raw</a>
+        <a href="https://gist.github.com/martmull/0c61ffe82260d3dd388ec8a38afdab82#file-nb_classifier-py">nb_classifier.py</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200;function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height); resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);}maybeResize();</script></body></html>

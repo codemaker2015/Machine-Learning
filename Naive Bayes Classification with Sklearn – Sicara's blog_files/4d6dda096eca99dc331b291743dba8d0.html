@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html><head><title>Medium</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!-- base href="https://blog.sicara.com/media/4d6dda096eca99dc331b291743dba8d0?postId=42d100429e44" --><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="4d6dda096eca99dc331b291743dba8d0_data/61948f7036aa2b12b560a164fa777376.js" charset="utf-8"></script><link rel="stylesheet" href="df64c19c163a394ab75ff536c2091665_data/gist-embed-c25e2efde9da332f6cd59ef5c647a379.css"><div id="gist86773914" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-preparing_data-py" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-python ">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-preparing_data-py-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-preparing_data-py-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> pandas <span class="pl-k">as</span> pd</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-preparing_data-py-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> numpy <span class="pl-k">as</span> np</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-preparing_data-py-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> matplotlib.pyplot <span class="pl-k">as</span> plt</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-preparing_data-py-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">import</span> time</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-preparing_data-py-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> sklearn.model_selection <span class="pl-k">import</span> train_test_split</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-preparing_data-py-LC6" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> sklearn.naive_bayes <span class="pl-k">import</span> GaussianNB, BernoulliNB, MultinomialNB</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-preparing_data-py-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-preparing_data-py-LC8" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Importing dataset</span></td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-preparing_data-py-LC9" class="blob-code blob-code-inner js-file-line">data <span class="pl-k">=</span> pd.read_csv(<span class="pl-s"><span class="pl-pds">"</span>data/train.csv<span class="pl-pds">"</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-preparing_data-py-LC10" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-preparing_data-py-LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Convert categorical variable to numeric</span></td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-preparing_data-py-LC12" class="blob-code blob-code-inner js-file-line">data[<span class="pl-s"><span class="pl-pds">"</span>Sex_cleaned<span class="pl-pds">"</span></span>]<span class="pl-k">=</span>np.where(data[<span class="pl-s"><span class="pl-pds">"</span>Sex<span class="pl-pds">"</span></span>]<span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">"</span>male<span class="pl-pds">"</span></span>,<span class="pl-c1">0</span>,<span class="pl-c1">1</span>)</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-preparing_data-py-LC13" class="blob-code blob-code-inner js-file-line">data[<span class="pl-s"><span class="pl-pds">"</span>Embarked_cleaned<span class="pl-pds">"</span></span>]<span class="pl-k">=</span>np.where(data[<span class="pl-s"><span class="pl-pds">"</span>Embarked<span class="pl-pds">"</span></span>]<span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">"</span>S<span class="pl-pds">"</span></span>,<span class="pl-c1">0</span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-preparing_data-py-LC14" class="blob-code blob-code-inner js-file-line">                                  np.where(data[<span class="pl-s"><span class="pl-pds">"</span>Embarked<span class="pl-pds">"</span></span>]<span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">"</span>C<span class="pl-pds">"</span></span>,<span class="pl-c1">1</span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-preparing_data-py-LC15" class="blob-code blob-code-inner js-file-line">                                           np.where(data[<span class="pl-s"><span class="pl-pds">"</span>Embarked<span class="pl-pds">"</span></span>]<span class="pl-k">==</span><span class="pl-s"><span class="pl-pds">"</span>Q<span class="pl-pds">"</span></span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>)</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-preparing_data-py-LC16" class="blob-code blob-code-inner js-file-line">                                          )</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-preparing_data-py-LC17" class="blob-code blob-code-inner js-file-line">                                 )</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-preparing_data-py-LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Cleaning dataset of NaN</span></td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-preparing_data-py-LC19" class="blob-code blob-code-inner js-file-line">data<span class="pl-k">=</span>data[[</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-preparing_data-py-LC20" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Survived<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-preparing_data-py-LC21" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Pclass<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-preparing_data-py-LC22" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Sex_cleaned<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-preparing_data-py-LC23" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Age<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-preparing_data-py-LC24" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>SibSp<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-preparing_data-py-LC25" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Parch<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-preparing_data-py-LC26" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Fare<span class="pl-pds">"</span></span>,</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-preparing_data-py-LC27" class="blob-code blob-code-inner js-file-line">    <span class="pl-s"><span class="pl-pds">"</span>Embarked_cleaned<span class="pl-pds">"</span></span></td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-preparing_data-py-LC28" class="blob-code blob-code-inner js-file-line">]].dropna(<span class="pl-v">axis</span><span class="pl-k">=</span><span class="pl-c1">0</span>, <span class="pl-v">how</span><span class="pl-k">=</span><span class="pl-s"><span class="pl-pds">'</span>any<span class="pl-pds">'</span></span>)</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-preparing_data-py-LC29" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-preparing_data-py-LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-c"><span class="pl-c">#</span> Split dataset in training and test datasets</span></td>
+      </tr>
+      <tr>
+        <td id="file-preparing_data-py-L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="file-preparing_data-py-LC31" class="blob-code blob-code-inner js-file-line">X_train, X_test <span class="pl-k">=</span> train_test_split(data, <span class="pl-v">test_size</span><span class="pl-k">=</span><span class="pl-c1">0.5</span>, <span class="pl-v">random_state</span><span class="pl-k">=</span><span class="pl-c1">int</span>(time.time()))</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/martmull/61948f7036aa2b12b560a164fa777376/raw/67e8bc2db988b01af1a8f2e4e8067e6ae26b4861/preparing_data.py" style="float:right">view raw</a>
+        <a href="https://gist.github.com/martmull/61948f7036aa2b12b560a164fa777376#file-preparing_data-py">preparing_data.py</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200;function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height); resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);}maybeResize();</script></body></html>
